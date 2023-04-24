@@ -90,11 +90,11 @@ gridSlider.addEventListener("input", () => {
 });
 
 
-// Get the erase button element
-const eraseButton = document.getElementById("erase-button");
+// Get the clear button element
+const clearButton = document.getElementById("clear-button");
 
-// Add an event listener to the button to erase the grid
-eraseButton.addEventListener("click", () => {
+// Add an event listener to the button to clear the grid
+clearButton.addEventListener("click", () => {
   const gridItems = document.querySelectorAll(".grid-item");
   gridItems.forEach((item) => {
     item.style.backgroundColor = "";

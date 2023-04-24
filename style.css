@@ -162,6 +162,7 @@ footer {
 .fa-github {
   font-size: 24px;
   transition: transform 0.3s ease-in-out;
+  color: #000;
 }
 
 .fa-github:hover {

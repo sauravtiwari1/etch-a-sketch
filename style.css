@@ -58,7 +58,7 @@ header {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* grid slider */
+/* slider container */
 .slider-container {
   display: flex;
   align-items: center;
@@ -82,6 +82,38 @@ header {
 .slider-container input[type="range"]:hover {
   opacity: 1;
   transform: scale(1.03);
+}
+
+/* Remove default styles */
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Style the slider track */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: none;
+  border: 1px solid #000000;
+}
+
+/* Style the slider thumb */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #000000;
+  background: #000000;
+  cursor: pointer;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: none;
 }
 
 .main{

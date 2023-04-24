@@ -1,8 +1,14 @@
 // Get the grid element
 const grid = document.getElementById("grid");
 
+// get the grid size display element
+const gridSizeDisplay = document.getElementById("grid-size-display");
+
+
 // default grid size
 let gridSize = 16;
+// Set the initial grid size display
+gridSizeDisplay.textContent = `${gridSize}x${gridSize}`;
 
 // Set the default grid columns and rows
 grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
@@ -20,6 +26,7 @@ for (let i = 0; i < totalGridItems; i++) {
 
 // Get the grid slider element
 const gridSlider = document.getElementById("grid-slider");
+
 
 // Add an event listener to the slider to update the grid size
 gridSlider.addEventListener("input", () => {
@@ -39,4 +46,6 @@ gridSlider.addEventListener("input", () => {
     box.classList.add("grid-item");
     grid.appendChild(box);
   }
-});
+    // Update the grid size display
+    gridSizeDisplay.textContent = `${gridSize}x${gridSize}`;
+  });

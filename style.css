@@ -30,9 +30,10 @@ header {
   flex-direction: column;
 }
 
-/* erase button */
+/* buttons */
 #clear-button,
-#eraser-button {
+#eraser-button,
+#randomizer{
   color: #000;
   border-radius: 7px;
   border: 2px solid #000000;
@@ -50,8 +51,13 @@ header {
   padding: 12px 3.24em 16px 3.24em;
 }
 
+#randomizer{
+  padding: 12px 2.6em 16px 2.6em;
+}
+
 #clear-button:hover,
-#eraser-button:hover {
+#eraser-button:hover,
+#randomizer:hover{
   background-color: rgba(85, 85, 85, 0.7);
   opacity: 1.1;
   transform: scale(1.1);
@@ -60,7 +66,8 @@ header {
 
 
 /* eraser button if clicked */
-#eraser-button.selected {
+#eraser-button.selected,
+#randomizer.selected{
   background-color: #333;
   color: #fff;
 }

@@ -16,7 +16,8 @@ header {
 .slider-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 .slider-container label {
@@ -39,7 +40,7 @@ header {
 
 .main{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
 }
@@ -124,7 +125,7 @@ footer a:visited .fa-github {
     height: 330px;
   }
   .main{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -134,6 +135,6 @@ footer a:visited .fa-github {
     height: 280px;
   }
   .main{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }

@@ -17,6 +17,13 @@ grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 // Calculate the total number of boxes to create
 const totalGridItems = gridSize * gridSize;
 
+
+// Define a function to change the color of a box to random
+function changeBoxColor_random(box) {
+  box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+}
+
+
 // Create and append boxes to the grid
 for (let i = 0; i < totalGridItems; i++) {
   const box = document.createElement("div");
@@ -24,22 +31,20 @@ for (let i = 0; i < totalGridItems; i++) {
   grid.appendChild(box);
 
 
-// Add event listener to each box to change color 
+  // Add event listener to each box to change color
   
-  // if clicked color will change
-  box.addEventListener("mousedown", () => {
-    box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-  });
-  
-  // if clicked and hovered, it will change color
-  box.addEventListener("mouseover", (event) => {
-    // Check if mouse button is pressed
-    if (event.buttons === 1) {
-      box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-    } else {
-      // do nothing
-    }
-  });
+    // if clicked color will change
+    box.addEventListener("mousedown", () => {
+      changeBoxColor_random(box);
+    });
+    
+    // if clicked and hovered, it will change color
+    box.addEventListener("mouseover", (event) => {
+      // Check if mouse button is pressed
+      if (event.buttons === 1) {
+        changeBoxColor_random(box);
+      }
+    });
 }
 
 // Get the grid slider element
@@ -64,22 +69,20 @@ gridSlider.addEventListener("input", () => {
     box.classList.add("grid-item");
     grid.appendChild(box);
     
- // Add event listener to each box to change color 
+  // Add event listener to each box to change color
   
-  // if clicked color will change
-  box.addEventListener("mousedown", () => {
-    box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-  });
-  
-  // if clicked and hovered, it will change color
-  box.addEventListener("mouseover", (event) => {
-    // Check if mouse button is pressed
-    if (event.buttons === 1) {
-      box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-    } else {
-      // do nothing
-    }
-  });
+    // if clicked color will change
+    box.addEventListener("mousedown", () => {
+      changeBoxColor_random(box);
+    });
+    
+    // if clicked and hovered, it will change color
+    box.addEventListener("mouseover", (event) => {
+      // Check if mouse button is pressed
+      if (event.buttons === 1) {
+        changeBoxColor_random(box);
+      }
+    });
 
   }
     // Update the grid size display

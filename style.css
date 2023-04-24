@@ -89,6 +89,18 @@ footer {
   padding: 10px;
 }
 
+.fa-github {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+footer a:visited .fa-github {
+  color: #000;
+}
 
 /* media queries */
 @media (max-width: 1150px) {

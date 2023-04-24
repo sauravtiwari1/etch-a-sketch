@@ -19,7 +19,7 @@ header {
 }
 
 /* erase button */
-#erase-button,
+#clear-button,
 #eraser-button {
   color: #000;
   border-radius: 7px;
@@ -34,7 +34,7 @@ header {
   cursor: pointer;
 }
 
-#erase-button:hover,
+#clear-button:hover,
 #eraser-button:hover {
   background-color: rgba(85, 85, 85, 0.7);
   opacity: 1.1;

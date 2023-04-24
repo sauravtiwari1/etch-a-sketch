@@ -34,6 +34,10 @@ header {
   cursor: pointer;
 }
 
+#clear-button{
+  padding: 12px 3.24em 16px 3.24em;
+}
+
 #clear-button:hover,
 #eraser-button:hover {
   background-color: rgba(85, 85, 85, 0.7);

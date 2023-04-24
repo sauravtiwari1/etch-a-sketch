@@ -23,8 +23,10 @@ function changeBoxColor(box) {
   const eraserButton = document.getElementById("eraser-button");
   if (eraserButton.classList.contains("selected")) {
     box.style.backgroundColor = "";
-  } else {
+  } else if (randomButton.classList.contains("selected")) {
     box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  } else{
+    // do nothing
   }
 }
 
@@ -114,4 +116,12 @@ const eraserButton = document.getElementById("eraser-button");
 // Add an event listener to the button to toggle the eraser mode
 eraserButton.addEventListener("click", () => {
   eraserButton.classList.toggle("selected");
+});
+
+
+// Get the randomizer button element
+const randomButton = document.getElementById("randomizer");
+// Add an event listener to the button to toggle the randomizer mode
+randomButton.addEventListener("click", () => {
+  randomButton.classList.toggle("selected");
 });

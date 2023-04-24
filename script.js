@@ -88,3 +88,15 @@ gridSlider.addEventListener("input", () => {
     // Update the grid size display
     gridSizeDisplay.textContent = `${gridSize}x${gridSize}`;
 });
+
+
+// Get the erase button element
+const eraseButton = document.getElementById("erase-button");
+
+// Add an event listener to the button to erase the grid
+eraseButton.addEventListener("click", () => {
+  const gridItems = document.querySelectorAll(".grid-item");
+  gridItems.forEach((item) => {
+    item.style.backgroundColor = "";
+  });
+});

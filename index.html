@@ -13,32 +13,37 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-   <header><h1>Etch-a-Sketch</h1></header>
-    <div class="main">
-        <div class="tools">
-            <button id="eraser-button">Eraser</button>
-            <button id="clear-button">Clear</button>
-            <div class="slider-container">
-              <label for="grid-slider">Grid Size:</label>
-              <input type="range" id="grid-slider" min="1" max="64" value="16">
-              <div class="grid-size-display" id="grid-size-display"></div>
-            </div>
-          </div>
-        <div class="grid-container" id="grid">
-
-        </div>
+  <header>
+    <div class="header-container">
+      <img src="./paperDoodle.png" alt="Etch-a-Sketch">
+      <h1>Etch-a-Sketch</h1>
     </div>
+  </header>
+  <div class="main">
+    <div class="tools">
+      <button id="eraser-button">Eraser</button>
+      <button id="clear-button">Clear</button>
+      <div class="slider-container">
+        <label for="grid-slider">Grid Size:</label>
+        <input type="range" id="grid-slider" min="1" max="64" value="16">
+        <div class="grid-size-display" id="grid-size-display"></div>
+      </div>
+    </div>
+    <div class="grid-container" id="grid">
+
+    </div>
+  </div>
     <footer>
-        <p>
-            Copyright ©
-            <script>
-              document.write(new Date().getFullYear())
-            </script>
-            &nbsp; saurav
-          <a href="https://github.com/saurav-png" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </p>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        &nbsp; saurav
+        <a href="https://github.com/saurav-png" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
     </footer>
 </body>
 </html>

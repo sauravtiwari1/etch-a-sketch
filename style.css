@@ -7,8 +7,20 @@ header {
   font-weight: 900;
   font-size: 27px;
   padding: 20px;
-  text-align: center;
   font-family: 'Luckiest Guy',cursive;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* logo */
+.header-container img{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
 }
 
 .tools{

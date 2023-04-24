@@ -139,8 +139,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 /* grid box */
 .grid-container {
   margin:3em 2em 3em 2em;
-  height: 550px;
-  width: 550px;
+  width: 45%;
+  height: 80%;
   box-sizing: border-box;
   display: grid;
   background:#fff;
@@ -190,22 +190,22 @@ footer a:visited .fa-github {
 /* media queries */
 @media (max-width: 1150px) {
   .grid-container{
-    width: 450px;
-    height: 450px;
+    width: 55%;
+    height: 90%;
   }
 }
 
 @media (max-width: 950px) {
   .grid-container{
-    width: 400px;
-    height: 400px;
+    width: 55%;
+    height: 75%;
   }
 }
 
 @media (max-width: 750px) {
   .grid-container{
-    width: 350px;
-    height: 350px;
+    width:65%;
+    height: 80%;
   }
   .main{
     flex-direction: column-reverse;
@@ -214,8 +214,8 @@ footer a:visited .fa-github {
 
 @media (max-width: 550px) {
   .grid-container{
-    width: 330px;
-    height: 330px;
+    width: 80%;
+    height: 70%;
   }
   .main{
     flex-direction: column-reverse;
@@ -224,8 +224,8 @@ footer a:visited .fa-github {
 
 @media (max-width: 400px) {
   .grid-container{
-    width: 280px;
-    height: 280px;
+    width: 90%;
+    height: 60%;
   }
   .main{
     flex-direction: column-reverse;

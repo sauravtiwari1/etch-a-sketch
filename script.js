@@ -18,10 +18,16 @@ grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 const totalGridItems = gridSize * gridSize;
 
 
-// Define a function to change the color of a box to random
-function changeBoxColor_random(box) {
-  box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+// Define a function to change the color of a box
+function changeBoxColor(box) {
+  const eraserButton = document.getElementById("eraser-button");
+  if (eraserButton.classList.contains("selected")) {
+    box.style.backgroundColor = "";
+  } else {
+    box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+  }
 }
+
 
 
 // Create and append boxes to the grid
@@ -35,14 +41,14 @@ for (let i = 0; i < totalGridItems; i++) {
   
     // if clicked color will change
     box.addEventListener("mousedown", () => {
-      changeBoxColor_random(box);
+      changeBoxColor(box);
     });
     
     // if clicked and hovered, it will change color
     box.addEventListener("mouseover", (event) => {
       // Check if mouse button is pressed
       if (event.buttons === 1) {
-        changeBoxColor_random(box);
+        changeBoxColor(box);
       }
     });
 }
@@ -73,14 +79,14 @@ gridSlider.addEventListener("input", () => {
   
     // if clicked color will change
     box.addEventListener("mousedown", () => {
-      changeBoxColor_random(box);
+      changeBoxColor(box);
     });
     
     // if clicked and hovered, it will change color
     box.addEventListener("mouseover", (event) => {
       // Check if mouse button is pressed
       if (event.buttons === 1) {
-        changeBoxColor_random(box);
+        changeBoxColor(box);
       }
     });
 
@@ -99,4 +105,13 @@ clearButton.addEventListener("click", () => {
   gridItems.forEach((item) => {
     item.style.backgroundColor = "";
   });
+});
+
+
+// Get the eraser button element
+const eraserButton = document.getElementById("eraser-button");
+
+// Add an event listener to the button to toggle the eraser mode
+eraserButton.addEventListener("click", () => {
+  eraserButton.classList.toggle("selected");
 });

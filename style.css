@@ -11,6 +11,34 @@ header {
   font-family: 'Luckiest Guy',cursive;
 }
 
+.tools{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* erase button */
+#erase-button {
+  color: #000;
+  border-radius: 7px;
+  border: 2px solid #000000;
+  padding: 12px 3em 16px 3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#erase-button:hover {
+  background-color: rgba(85, 85, 85, 0.7);
+  opacity: 1.1;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease-in-out;
+}
 
 /* grid slider */
 .slider-container {

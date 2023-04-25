@@ -26,7 +26,7 @@ A simple pixelated art making web page made using HTML, CSS and Javascript.
 
 # Where to Play?
 * #### [GitHub Deployment](https://saurav-png.github.io/etch-a-sketch/)
-* #### [Netlify Site]()
+* #### [Netlify Site](https://saurav-etch-a-sketch.netlify.app/)
 
 ## Creator
 [Saurav Tiwari](https://www.linkedin.com/in/saurav-md/)

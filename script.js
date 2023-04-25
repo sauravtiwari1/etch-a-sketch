@@ -25,8 +25,9 @@ function changeBoxColor(box) {
     box.style.backgroundColor = "";
   } else if (randomButton.classList.contains("selected")) {
     box.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-  } else{
-    // do nothing
+  }else {
+    const colorPicker = document.getElementById("color-picker");
+    box.style.backgroundColor = colorPicker.value;
   }
 }
 
@@ -116,12 +117,18 @@ const eraserButton = document.getElementById("eraser-button");
 // Get the randomizer button element
 const randomButton = document.getElementById("randomizer");
 
+// get the color button element
+const colorButton = document.getElementById("color-button");
+const colorPicker = document.getElementById("color-picker");
+
 // Add an event listener to the button to toggle the eraser mode
 eraserButton.addEventListener("click", () => {
   eraserButton.classList.toggle("selected");
   
   // Deactivate the randomizer button
   randomButton.classList.remove("selected");
+  // Deactivate the color button
+  colorButton.classList.remove("selected");
 });
 
 
@@ -133,4 +140,25 @@ randomButton.addEventListener("click", () => {
 
   // Deactivate the eraser button
   eraserButton.classList.remove("selected");
+  // Deactivate the color button
+  colorButton.classList.remove("selected");
+});
+
+
+// Add event listener to the color button
+colorButton.addEventListener("click", () => {
+
+  // Toggle the color button
+  colorButton.classList.toggle("selected");
+  // Deactivate the eraser button
+  eraserButton.classList.remove("selected");
+  // Deactivate the randomizer button
+  randomButton.classList.remove("selected");
+
+});
+
+// Add event listener to the color picker
+colorPicker.addEventListener("input", (event) => {
+  // Prevent the event from bubbling up to the color button
+  event.stopPropagation();
 });

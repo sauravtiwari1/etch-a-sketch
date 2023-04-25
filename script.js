@@ -113,24 +113,24 @@ clearButton.addEventListener("click", () => {
 // Get the eraser button element
 const eraserButton = document.getElementById("eraser-button");
 
+// Get the randomizer button element
+const randomButton = document.getElementById("randomizer");
+
 // Add an event listener to the button to toggle the eraser mode
 eraserButton.addEventListener("click", () => {
   eraserButton.classList.toggle("selected");
   
   // Deactivate the randomizer button
-  const randomButton = document.getElementById("randomizer");
   randomButton.classList.remove("selected");
 });
 
 
-// Get the randomizer button element
-const randomButton = document.getElementById("randomizer");
+
 
 // Add an event listener to the button to toggle the randomizer mode
 randomButton.addEventListener("click", () => {
   randomButton.classList.toggle("selected");
 
   // Deactivate the eraser button
-  const eraserButton = document.getElementById("eraser-button");
   eraserButton.classList.remove("selected");
 });

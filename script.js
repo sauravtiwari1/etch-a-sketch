@@ -129,6 +129,12 @@ eraserButton.addEventListener("click", () => {
   randomButton.classList.remove("selected");
   // Deactivate the color button
   colorButton.classList.remove("selected");
+  
+  // If no button is selected, select the color button
+  if (!eraserButton.classList.contains("selected") && !randomButton.classList.contains("selected")) {
+    colorButton.classList.add("selected");
+  }
+
 });
 
 
@@ -142,18 +148,25 @@ randomButton.addEventListener("click", () => {
   eraserButton.classList.remove("selected");
   // Deactivate the color button
   colorButton.classList.remove("selected");
+  
+  // If no button is selected, select the color button
+  if (!eraserButton.classList.contains("selected") && !randomButton.classList.contains("selected")) {
+    colorButton.classList.add("selected");
+  }
 });
 
 
 // Add event listener to the color button
 colorButton.addEventListener("click", () => {
 
-  // Toggle the color button
-  colorButton.classList.toggle("selected");
   // Deactivate the eraser button
   eraserButton.classList.remove("selected");
   // Deactivate the randomizer button
   randomButton.classList.remove("selected");
+  // If no button is selected, select the color button
+  if (!eraserButton.classList.contains("selected") && !randomButton.classList.contains("selected")) {
+    colorButton.classList.add("selected");
+  }
 
 });
 

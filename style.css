@@ -25,9 +25,37 @@ header {
 
 .tools{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+
+/* color selection tool */
+.color-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column ;
+}
+
+input[type="color"] {
+  height: 40px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border-radius: 5px;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 5px;
+  height: 100%;
+  padding: 0;
 }
 
 /* buttons */

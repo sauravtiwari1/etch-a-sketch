@@ -56,6 +56,10 @@ header {
   padding: 12px 2.6em 16px 2.6em;
 }
 
+#color-button{
+  padding: 12px 3.2em 16px 3.2em;
+}
+
 #clear-button:hover,
 #eraser-button:hover,
 #randomizer:hover

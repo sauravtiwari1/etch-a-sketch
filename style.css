@@ -90,7 +90,7 @@ input[type="color"]::-webkit-color-swatch {
 
 #clear-button:hover,
 #eraser-button:hover,
-#randomizer:hover
+#randomizer:hover,
 #color-button:hover{
   background-color: rgba(85, 85, 85, 0.7);
   opacity: 1.1;
